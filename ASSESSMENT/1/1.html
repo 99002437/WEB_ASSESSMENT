@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <script src="./Scripts/Common.js"></script>
+    <script src="./Scripts/Classes.js"></script>
+    <script>
+        function store(){
+            alert('User Successfully Registered');
+            let name = $("fname").value;
+            let dob = $("dob").value;
+            let status = $("status").value;
+            let qual = $("userQual").value;
+            let userObj = new employee(name, dob, status, qual);
+            let text = `<h1>Name: ${userObj.name} </h1><p>DOB: ${userObj.dob} </p><p>Marital Status: ${userObj.status} </p><p>Qualification: ${userObj.qual} </p>`
+            $("printHere").innerHTML = text;
+        }
+    </script>
+<html>
+    
+<body>
+
+    <style>
+        body{
+            background-color: #4e4e4e;
+            color: rgb(255, 255, 255);
+        }
+       
+    </style>
+   
+<h2>L&T Technology Services</h2>
+<p>Dear interns, Please <strong>Fill the below details</strong> without fail. </p> 
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" placeholder="Enter first Name" id="fname" name="lname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Enter your email:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="dob">Date of Birth:</label><br>
+  <input type="date" id="birthday" name="birthday"><br><br>
+  <label for="gender">Gender:</label><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+  
+
+  <head>
+    <label for="text">Batch:</label><br>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Page</title>
+    <script src="./Scripts/Common.js"></script>
+    <script>
+        let store=[0,1,2];
+       let ddfunc=()=>{
+            var x = document.getElementById("myList").value;
+            if(x== store[0])
+            {
+                var ARYABHATT;
+                document.getElementById("printlist").innerHTML = ARYABHATT.join("<br>");
+            }
+
+             if(x == store[1])
+            {
+                var BRAHMAGUPTHA;
+                document.getElementById("printlist").innerHTML = BRAHMAGUPTHA.join("<br>");
+            }
+
+            else if(x == store[2])
+            {
+                var KANNAD;
+                document.getElementById("printlist").innerHTML = KANNAD.join("<br>");
+            }
+        }
+
+    </script>
+</head>
+
+<body style="text-align:center">
+    
+    <select id="myList" onchange="ddfunc()">
+        <option >----------select-----------</option>
+        <option value="0">ARYABHATT</option>
+        <option value="1">BRAHMAGUPTHA</option>
+        <option value="2">KANNAD</option>
+      </select> 
+      <p id="printlist"></p><br><br><br><br>
+   
+      <button type="button" onclick=store()>SUBMIT</button>
+
+
+    </section>
+    <br>  
+    <br>  
+    <div>
+        
+       
+       
+    </div>
+    <footer> 
+    
+        <a style="color:rgb(255, 255, 255);" href="https://www.ltts.com/" target="_blank">www.ltts.com</a> 
+      </footer>
+</form>
+
+<p id="printHere"></p>
+
+</body>
+</html>
